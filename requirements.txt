@@ -4,8 +4,6 @@ pybase64
 gunicorn
 psycopg2
 pandas
-json
-time
 pdfplumber
 re
 jsonschema

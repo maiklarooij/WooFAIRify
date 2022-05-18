@@ -1,0 +1,142 @@
+{
+    "title": "Zonneweide Jaagweg (sept, okt, nov, dec 2021)",
+    "identifier": "ZW8",
+    "type": "Actieve openbaarmaking",
+    "topic": "Zonneweide Jaagweg",
+    "idTopic": "ZW001",
+    "sourceUrl": "https://www.noord-holland.nl/Loket/Pilot_actieve_openbaarmaking/Documenten/Zonneweide_Jaagweg_sept_okt_nov_dec_2021",
+    "decisionDate": "2021-12-23",
+    "handledBy": "Provincie Noord-Holland",
+    "valuation": "Deels openbaar",
+    "documents": [
+        {
+          "title": "Besluit actieve openbaarmaking Zonneweide Jaagweg sept okt nov dec 2021",
+          "documentType": "Besluit",
+          "date": "2021-12-23",
+          "language": "nld",
+          "identifier": "ZW8-1",
+          "mimeType": "application/pdf",
+          "fileName": "Besluit actieve openbaarmaking Zonneweide Jaagweg sept okt nov dec 2021.pdf",
+          "fileExtension": "pdf",
+          "numberPages": 2,
+          "numberCharacters": 4069,
+          "numberWords": 548,
+          "numberTextPages": 2
+        },
+        {
+          "title": "Memo BO verslag gesprek 20210907",
+          "documentType": "Vrijgegeven document",
+          "date": "2021-07-20",
+          "language": "nld",
+          "recipient": "Gedeputeerde Stigter, wethouder Van Dolder",
+          "annexType": "Memo",
+          "valuation": "Deels openbaar",
+          "groundsOfRefusal": [
+            "10.2.e"
+          ],
+          "identifier": "ZW8-2",
+          "mimeType": "application/pdf",
+          "fileName": "4. Memo BO verslag gesprek 20210907.pdf",
+          "fileExtension": "pdf",
+          "numberPages": 3,
+          "numberCharacters": 4953,
+          "numberWords": 766,
+          "numberTextPages": 3
+        },
+        {
+          "title": "Memo BO verslag gesprek 20210421",
+          "documentType": "Vrijgegeven document",
+          "date": "2021-07-19",
+          "language": "nld",
+          "recipient": "Gedeputeerde Stigter, wethouder Van Dolder",
+          "annexType": "Memo",
+          "valuation": "Deels openbaar",
+          "groundsOfRefusal": [
+            "10.2.e"
+          ],
+          "identifier": "ZW8-3",
+          "mimeType": "application/pdf",
+          "fileName": "2. Memo BO verslag gesprek 20210421.pdf",
+          "fileExtension": "pdf",
+          "numberPages": 2,
+          "numberCharacters": 3522,
+          "numberWords": 511,
+          "numberTextPages": 2
+        },
+        {
+          "title": "Inventarisatielijst sept okt nov dec 2021 dossier zonneweide Jaagweg",
+          "documentType": "Inventarislijst",
+          "date": "2021-12-23",
+          "language": "nld",
+          "identifier": "ZW8-4",
+          "mimeType": "application/pdf",
+          "fileName": "Inventarisatielijst sept okt nov dec 2021 dossier zonneweide Jaagweg.pdf",
+          "fileExtension": "pdf",
+          "numberPages": 1,
+          "numberCharacters": 534,
+          "numberWords": 98,
+          "numberTextPages": 1
+        },
+        {
+          "title": "Memo BO verslag gesprek 20210324",
+          "documentType": "Vrijgegeven document",
+          "date": "2021-07-19",
+          "language": "nld",
+          "recipient": "Gedeputeerde Stigter, wethouder van Dolder",
+          "annexType": "Memo",
+          "valuation": "Deels openbaar",
+          "groundsOfRefusal": [
+            "10.2.e"
+          ],
+          "identifier": "ZW8-5",
+          "mimeType": "application/pdf",
+          "fileName": "1. Memo BO verslag gesprek 20210324.pdf",
+          "fileExtension": "pdf",
+          "numberPages": 2,
+          "numberCharacters": 2966,
+          "numberWords": 417,
+          "numberTextPages": 2
+        },
+        {
+          "title": "Agenda BO 18112021 gedeputeerde Stigter en Koggenland zonneweide Jaagweg",
+          "documentType": "Vrijgegeven document",
+          "date": "2021-11-17",
+          "language": "nld",
+          "recipient": "Gedeputeerde Stigter, portefeuille klimaat en energie",
+          "annexType": "Agenda",
+          "valuation": "Deels openbaar",
+          "groundsOfRefusal": [
+            "10.2.e"
+          ],
+          "identifier": "ZW8-6",
+          "mimeType": "application/pdf",
+          "fileName": "5. Agenda BO 18112021 gedeputeerde Stigter en Koggenland zonneweide Jaagweg.pdf",
+          "fileExtension": "pdf",
+          "numberPages": 2,
+          "numberCharacters": 1637,
+          "numberWords": 211,
+          "numberTextPages": 2
+        },
+        {
+          "title": "Memo BO verslag gesprek 20210520",
+          "documentType": "Vrijgegeven document",
+          "date": "2021-07-19",
+          "language": "nld",
+          "recipient": "Gedeputeerde Stigter, wethouder Van Dolder",
+          "annexType": "Memo",
+          "valuation": "Deels openbaar",
+          "groundsOfRefusal": [
+            "10.2.e"
+          ],
+          "identifier": "ZW8-7",
+          "mimeType": "application/pdf",
+          "fileName": "3. Memo BO verslag gesprek 20210520.pdf",
+          "fileExtension": "pdf",
+          "numberPages": 2,
+          "numberCharacters": 3031,
+          "numberWords": 449,
+          "numberTextPages": 2
+        }
+      ],
+    "numberDocuments": 7
+}

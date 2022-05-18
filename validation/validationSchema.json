@@ -1,0 +1,102 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "/schemas/publication",
+    "title": "Publication",
+    "description": "Defines a schema to represent a publication",
+    "type": "object",
+    
+    "properties": {
+        "identifier": {"type": ["integer", "string"]},
+        "title": {"type": "string"},
+        "topic": {"type": "string"},
+        "topicId": {"type": "string"},
+        "handledBy": {"type": "string"},
+        "type": {"type": "string", "enum": ["Verzoek", "Actieve openbaarmaking"]},
+        "fileDate": {"type": "string", "format": "date", "pattern": "[0-9]{4}-[0-9]{2}-[0-9]{2}"},
+        "decisionDate": {"type": "string", "format": "date", "pattern": "[0-9]{4}-[0-9]{2}-[0-9]{2}"},
+        "valuation": {"type": "string", "enum": ["Openbaar", "Deels openbaar", "Reeds openbaar", "Niet openbaar"]},
+        "adjourned": {"type": "boolean"},
+        "description": {"type": "string"},
+        "internalId": {"type": ["integer", "string"]},
+        "requester": {"type": "string"},
+        "firstRecipient": {"type": "string"},
+        "numberDocuments": {"type": "integer"},
+        "sourceUrl": {"type": "string", "format": "uri"},
+        "retrievedAt": {"type": "string", "format": "date", "pattern": "[0-9]{4}-[0-9]{2}-[0-9]{2}"},
+        "documents": {"type": "array", "items": {"$ref": "#/$defs/document"}}
+    },
+    
+    "required": ["identifier", "title", "handledBy", "type", "decisionDate", "valuation"],
+
+    "if": {
+        "properties": { "type": { "const": "Verzoek" } }
+    },
+    "then": {
+        "required": ["adjourned", "fileDate"]
+    },
+    
+    "$defs": {
+         "document": {
+            "$schema": "https://json-schema.org/draft/2020-12/schema",
+            "$id": "/schemas/document",
+            "title": "Document",
+            "description": "Defines a schema to represent a document",
+            "type": "object",
+        
+            "properties": {
+                "identifier": {"type": ["integer", "string"]},
+                "title": {"type": "string"},
+                "fileName": {"type": "string"},
+                "fileExtension": {"type": "string"},
+                "documentType": {"type": "string", "enum": ["Vrijgegeven document", "Verzoek", "Besluit", "Inventarislijst"]},
+                "sourceUrl": {"type": "string", "format": "uri"},
+                "numberPages": {"type": "integer"},
+                "numberWords": {"type": "integer"},
+                "numberTextPages": {"type": "integer"},
+                "numberCharacters": {"type": "integer"},
+                "language": {"type": "string"},
+                "isScan": {"type": "boolean"},
+                "fileSize": {"type": "string"},
+                "mimeType": {"type": "string"},
+                "date": {"type": "string", "format": "date", "pattern": "[0-9]{4}-[0-9]{2}-[0-9]{2}"},
+                "description": {"type": "string"},
+                "bodyText": {"type": "string"},
+                "annexType": {"type": "string"},
+                "valuation": {"type": "string", "enum": ["Openbaar", "Deels openbaar", "Reeds openbaar", "Niet openbaar"]},
+                "groundsOfRefusal": {"type": "array", "items": { "type": "string"}},
+                "alreadyPublicLocation": {"type": "string", "format": "uri"},
+                "originator": {"type": "string"},
+                "recipient": {"type": "string"}
+            },
+        
+            "required": ["identifier", "title", "date", "fileName", "fileExtension", "mimeType", "documentType"],
+        
+            "if": {
+                "properties": { "documentType": { "const": "Vrijgegeven document" } }
+            },
+            "then": {
+        
+                "required": ["annexType", "valuation"],
+        
+                "allOf": [
+                    {
+                        "if": {
+                            "properties": { "valuation": { "const": "Reeds openbaar" } }
+                        },
+                        "then": {
+                            "required": ["alreadyPublicLocation"]
+                        }
+                    },
+                    {
+                        "if": {
+                            "properties": { "valuation": { "value": ["Niet openbaar", "Deels openbaar"] } }
+                        },
+                        "then": {
+                            "required": ["groundsOfRefusal"]
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

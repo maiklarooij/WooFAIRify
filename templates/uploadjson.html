@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+{% block header %}
+
+<h2 class="title nav-text">Validate JSON.</h2>
+
+{% endblock %}
+
+{% block content %}
+    
+    <form method="POST" action="upload_publication" style="margin-bottom: 15px" enctype="multipart/form-data">
+        <label for="file">Bestand</label>
+        <input class="form-control" type="file" name="file" placeholder="Kies bestand...">
+
+        <button style="margin-top:20px" class="btn btn-primary" type="submit">Bekijk publicatie</button>
+    </form>
+
+{% endblock %}

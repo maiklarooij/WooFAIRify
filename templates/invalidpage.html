@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% block header %}
+
+<h2 class="title nav-text">Result.</h2>
+
+{% endblock %}
+
+{% block content %}
+
+<label><h2>&#10060; Input is invalid!</h2></label>
+
+<ul>
+    {% for error in errors %}
+        <li>{{ error.message }}</li>
+    {% endfor %}
+</ul>
+
+<form method="POST" action="download_json">
+    <button name="metadatastring" class="btn btn-primary" type="submit" value="{{ metadata_string }}">click me</button>
+</form>
+
+{% endblock %}

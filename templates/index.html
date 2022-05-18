@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+{% block header %}
+    <h2 class="title nav-text">Welkom.</h2>
+{% endblock %}
+
+{% block content %}
+
+    <label><h2>&#10067; What do you want to do?</h2></label>
+    <div class='row'>
+        <div class="col">
+            <form action="/create_publication">
+                <button type="submit" class="btn btn-outline-success btn-lg btn-block">Create publication</button>
+            </form>
+        </div>
+        <div class="col">
+            <form action="/upload_publication">
+                <button type="submit" class="btn btn-outline-success btn-lg btn-block">Validate publication</button>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

@@ -8,6 +8,7 @@ from apps.validation import validate_metadata
 import json
 from time import strftime, gmtime
 import pandas as pd
+import os
 
 # Configure applicatioN
 app = Flask(__name__)
@@ -61,17 +62,36 @@ def download_json():
             headers={'Content-Disposition':f'attachment;filename={filename}'})
 
 @app.route("/upload_publication", methods=["GET", "POST"])
-def upload_json():
+def upload_json(method='normal'):
     if request.method == 'GET':
         return render_template('uploadjson.html')
     else:
-        metadata_object = json.load(request.files['file'])
+        if method == 'example':
+            metadata_object = json.load(open('documentation/example publication/metadata/ZW8-data.json'))
+        else:
+            metadata_object = json.load(request.files['file'])
         validation_result = validate_metadata(metadata_object)
 
         if validation_result == True:
             return generate_resultpage(metadata_object)
         else:
             return render_template('invalidpage.html', errors=validation_result, metadata_string=json.dumps(metadata_object, indent=4))
+
+
+@app.route("/exampleproduction", methods=["POST", "GET"])
+def exampleproduction():
+    if request.method == "GET":
+        return render_template('exampleproduction.html')
+
+    return upload_json(method='example')
+
+@app.route("/examplevalidation", methods=["POST", "GET"])
+def examplevalidation():
+    if request.method == "GET":
+        files = os.listdir('documentation/example publication/documenten')
+        return render_template('examplevalidation.html', files=files)
+
+    return upload_json(method='example')
 
 
 def generate_resultpage(metadata_object):

@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+{% block header %}
+
+<h2 class="title nav-text">Example validation.</h2>
+
+{% endblock %}
+
+{% block content %}
+    
+    <h3>We have the following files: </h3>
+    <ul>
+    {% for file in files %}
+        <li>{{ file }}</li>
+    {% endfor %}
+    </ul>
+
+    <h3>The files are already transformed into a JSON document.</h3>
+    Suppose we want to validate our document...
+
+    <form method="POST" action="examplevalidation" style="margin-bottom: 15px" enctype="multipart/form-data">
+        <button style="margin-top:20px" class="btn btn-primary" type="submit">Validate</button>
+    </form>
+
+{% endblock %}

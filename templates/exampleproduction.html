@@ -1,0 +1,295 @@
+{% extends 'layout.html' %}
+{% block header %}
+    <h2 class="title nav-text">Example publication.</h2>
+{% endblock %}
+
+{% block content %}
+    <form method="POST" action="exampleproduction" class="form-big" enctype="multipart/form-data">
+        <div id="request-level">
+            <!-- Basic info row-->
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <label for="title">Titel</label>
+                    <input class="form-control" type="text" name="title" value="Zonneweide Jaagweg (sept, okt, nov, dec 2021)"  >
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="identifier">Uniek ID</label>
+                    <input class="form-control" type="text" name="identifier" value="ZW8">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="type">Type</label>
+                    <select class="form-control" name="type">
+                        <option selected value> Actieve openbaarmaking </option>
+                        <option>Verzoek</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Secondary info row-->
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <label for="firstRecipient">Eerste ontvanger</label>
+                    <input class="form-control" type="text" name="firstRecipient" placeholder="Eerste ontvanger">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="topic">Thema</label>
+                    <input class="form-control" type="text" name="topic" value="Zonneweide Jaagweg">
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="idTopic">Thema ID</label>
+                    <input class="form-control" type="text" name="idTopic" value="ZW001">
+                </div>
+            </div>
+
+            <!-- Extra info row-->
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <label for="sourceUrl">URL naar publicatie</label>
+                    <input class="form-control" type="text" name="sourceUrl" value="https://www.noord-holland.nl/Loket/Pilot_actieve_openbaarmaking/Documenten/Zonneweide_Jaagweg_sept_okt_nov_dec_2021"  >
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="requester">Verzoeker</label>
+                    <input class="form-control" type="text" name="requester" placeholder="Verzoeker">
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="idInternal">Intern ID</label>
+                    <input class="form-control" type="text" name="topic" placeholder="Intern ID">
+                </div>
+            </div>
+
+            <!-- Date row-->
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <label for="fileDate">Verzoekdatum</label>
+                    <input class="datepicker_input form-control" type="text" name="fileDate" placeholder="YYYY/MM/DD">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="decisionDate">Besluitdatum</label>
+                    <input class="datepicker_input form-control" type="text" name="decisionDate" value="2021-12-23"  >
+                </div>
+            </div>
+
+            <!-- Decision row-->
+            <div class="row">
+                <div class="form-group col-md-4">
+                    <label for="handledBy">Behandeld door</label>
+                    <input class="form-control" type="text" name="handledBy" value="Provincie Noord-Holland"  >
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="valuation">Beoordeling</label>
+                    <select class="form-control" name="valuation" >
+                        <option selected value> Deels openbaar </option>
+                        <option>Openbaar</option>
+                        <option>Niet openbaar</option>
+                        <option>Reeds openbaar</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="adjourned">Verdaagd (indien van toepassing)</label>
+                    <select class="form-control" name="adjourned">
+                        <option disabled selected value> -- selecteer een optie -- </option>
+                        <option>Ja</option>
+                        <option>Nee</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- Description row-->
+            <div class="row">
+                <div class="form-group col-md-12">
+                    <label for="description">Beschrijving</label>
+                    <textarea class="form-control" rows="3" name="description" placeholder="Beschrijving">Actieve openbaarmaking van documenten in de maanden september t/m december met betrekking tot de Zonneweide Jaagweg.</textarea>
+                </div>
+            </div>
+            
+            <button style="float: right" type="button" class="btn btn-primary" onclick="createDocuments()">Next step</button>
+        </div>
+
+        <div id="document-level" style="display: none">
+            <div class="input_fields_wrap">
+                <h3>Document 1</h3>
+
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <label for="title">Titel</label>
+                        <input class="form-control" type="text" name="doc1.title" value="Besluit actieve openbaarmaking Zonneweide Jaagweg sept okt nov dec 2021">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="type">Documenttype</label>
+                        <select class="form-control" id="doc1." name="doc1.documentType" onchange="extraFields(this.id, this.value)">
+                            <option selected value> Besluit </option>
+                            <option>Verzoek</option>
+                            <option>Inventarislijst</option>
+                            <option>Vrijgegeven document</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="date">Datum</label>
+                        <input class="datepicker_input_${documents} form-control" type="text" name="doc1.date" value="2021-12-23"  >
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <label for="file">Bestand</label>
+                        <input class="form-control" type="file" name="doc1.file" placeholder="Kies bestand...">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="language">Taal</label>
+                        <select class="form-control" name="doc1.language">
+                            <option selected value> nld </option>
+                            <option>eng</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <label for="description">Beschrijving</label>
+                        <textarea class="form-control" rows="3" name="doc1.description" placeholder="Beschrijving">Besluitdocument</textarea>
+                    </div>
+                </div>
+                
+                <h3>Documents 2-6...</h3>
+
+                <h3>Document 7</h3>
+
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <label for="title">Titel</label>
+                        <input class="form-control" type="text" name="doc7.title" value="Memo BO verslag gesprek 20210520">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="type">Documenttype</label>
+                        <select class="form-control" id="doc7." name="doc7.documentType" onchange="extraFields(this.id, this.value)">
+                            <option>Verzoek</option>
+                            <option>Besluit</option>
+                            <option>Inventarislijst</option>
+                            <option selected value>Vrijgegeven document</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="date">Datum</label>
+                        <input class="datepicker_input_${documents} form-control" type="text" name="doc7.date" value="2021-07-19"  >
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <label for="file">Bestand</label>
+                        <input class="form-control" type="file" name="doc7.file" placeholder="Kies bestand...">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="language">Taal</label>
+                        <select class="form-control" name="doc7.language">
+                            <option selected value> nld </option>
+                            <option>eng</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <label for="description">Beschrijving</label>
+                        <textarea class="form-control" rows="3" name="doc7.description" placeholder="Beschrijving"></textarea>
+                    </div>
+                </div>
+                
+                <!-- Extra fields for published documents-->
+                <div id="doc7.extraFields">
+                    <div class="row">
+                        <div class="form-group col-md-4">
+                            <label for="originator">Verzender</label>
+                            <input class="form-control" type="text" name="doc7.originator" placeholder="Verzender">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="recipient">Ontvanger</label>
+                            <input class="form-control" type="text" name="doc7.recipient" value="Gedeputeerde Stigter, wethouder Van Dolder">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="annexType">Type vrijgegeven document</label>
+                            <input class="form-control" type="text" name="doc7.annexType" value="Memo">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-4">
+                            <label for="valuation">Beoordeling</label>
+                            <select class="form-control" name="doc7.valuation" >
+                                <option>Openbaar</option>
+                                <option selected value>Deels openbaar</option>
+                                <option>Niet openbaar</option>
+                                <option>Reeds openbaar</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="groundsOfRefusal">Weigeringsgrond(en) (gescheiden met komma)</label>
+                            <input class="form-control" type="text" name="doc7.groundsOfRefusal" value="10.2.e">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="alreadyPublicLocation">Vindplaats reeds openbaar</label>
+                            <input class="form-control" type="text" name="doc7.alreadyPublicLocation" placeholder="Vindplaats reeds openbaar">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="backToRequest()">Previous step</button>
+            <button style="float: right" class="btn btn-primary" type="submit">Create JSON</button>
+        </div>
+    </form> 
+
+{% endblock %}
+
+{% block script %}
+<script>
+
+    var wrapper = $(".input_fields_wrap");
+    var documents = 1;
+
+    // Switch to document view
+    function createDocuments() {
+        document.getElementById('request-level').style.display = "none";
+        document.getElementById('document-level').style.display = "block";
+    }
+
+    // Switch to request view
+    function backToRequest() {
+        document.getElementById('request-level').style.display = "block";
+        document.getElementById('document-level').style.display = "none";
+    }
+
+    // Show extra fields for released documents
+    function extraFields(docid, value) {
+        elementid = docid + 'extraFields';
+        console.log(elementid);
+        if (value == 'Vrijgegeven document') {
+            document.getElementById(docid + 'extraFields').style.display = 'block';
+        }
+        else {
+            document.getElementById(docid + 'extraFields').style.display = 'none';
+        }
+    }
+
+
+    /* Bootstrap 5 JS included */
+    /* vanillajs-datepicker 1.1.4 JS included */
+
+    const getDatePickerTitle = elem => {
+    // From the label or the aria-label
+    const label = elem.nextElementSibling;
+    let titleText = '';
+    if (label && label.tagName === 'LABEL') {
+        titleText = label.textContent;
+    } else {
+        titleText = elem.getAttribute('aria-label') || '';
+    }
+    return titleText;
+    }
+
+    const elems = document.querySelectorAll('.datepicker_input');
+    for (const elem of elems) {
+    const datepicker = new Datepicker(elem, {
+        'format': 'yyyy-mm-dd', // UK format
+        title: getDatePickerTitle(elem)
+    });
+    }     
+</script>
+{% endblock %}
+

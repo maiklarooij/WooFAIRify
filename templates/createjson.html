@@ -62,11 +62,11 @@
             <div class="row">
                 <div class="form-group col-md-6">
                     <label for="fileDate">Verzoekdatum</label>
-                    <input class="datepicker_input form-control" type="text" name="fileDate" placeholder="DD/MM/YYYY">
+                    <input class="datepicker_input form-control" type="text" name="fileDate" placeholder="YYYY/MM/DD">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="decisionDate">Besluitdatum</label>
-                    <input class="datepicker_input form-control" type="text" name="decisionDate" placeholder="DD/MM/YYYY"  >
+                    <input class="datepicker_input form-control" type="text" name="decisionDate" placeholder="YYYY/MM/DD"  >
                 </div>
             </div>
 
@@ -104,15 +104,15 @@
                 </div>
             </div>
 
-            <button style="float: right" type="button" class="btn btn-primary" onclick="createDocuments()">Volgende stap</button>
+            <button style="float: right" type="button" class="btn btn-primary" onclick="createDocuments()">Next step</button>
         </div>
 
         <div id="document-level" style="display: none">
             <div class="input_fields_wrap">
             </div>
             <div><button style="margin-bottom: 30px" type="button" class="btn btn-primary" id="newdocument" onclick="addDocument()">Voeg document toe</button></div>
-            <button type="button" class="btn btn-primary" onclick="backToRequest()">Vorige stap</button>
-            <button style="float: right" class="btn btn-primary" type="submit">Maak JSON</button>
+            <button type="button" class="btn btn-primary" onclick="backToRequest()">Previous step</button>
+            <button style="float: right" class="btn btn-primary" type="submit">Create JSON</button>
         </div>
     </form> 
 
@@ -171,7 +171,7 @@
             </div>
             <div class="form-group col-md-3">
                 <label for="date">Datum</label>
-                <input class="datepicker_input_${documents} form-control" type="text" name="${prefix}date" placeholder="DD/MM/YYYY"  >
+                <input class="datepicker_input_${documents} form-control" type="text" name="${prefix}date" placeholder="YYYY/MM/DD"  >
             </div>
         </div>
         <div class="row">
@@ -205,7 +205,7 @@
                 </div>
                 <div class="form-group col-md-4">
                     <label for="recipient">Ontvanger</label>
-                    <input class="form-control" type="text" name="${prefix}recipient" placeholder="Verzender">
+                    <input class="form-control" type="text" name="${prefix}recipient" placeholder="Ontvanger">
                 </div>
                 <div class="form-group col-md-4">
                     <label for="annexType">Type vrijgegeven document</label>

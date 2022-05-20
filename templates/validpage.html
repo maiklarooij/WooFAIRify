@@ -12,6 +12,11 @@
             <label><h2>&#9989; Success</h2></label>
             <p>{{ metadata['title'] }} is generated successfully and is valid!</p>
 
+            <h3>Automatically generated description:</h3>
+            <p>
+                Besluit op een {{ metadata['type'] }} over {{ metadata['title'] }}. Het besluit is op {{ metadata['decisionDate'] }} genomen en is behandeld door {{ metadata['handledBy'] }}. De publicatie bestaat uit {{ metadata['numberDocuments'] }} documenten.
+            </p>
+
             <form method="POST" action="download_json" style="margin-bottom: 15px">
                 <button name="metadatastring" class="btn btn-primary" type="submit" value="{{ metadata_string }}">Download JSON</button>
             </form>

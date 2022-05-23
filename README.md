@@ -15,6 +15,10 @@ Een publicatie creëren kan met de volgende stappen:
 Mochten de gegevens niet valide zijn (ze voldoen niet aan de opgestelde eisen), dan verschijnt er een pagina met de gegevens van de validatie.
 ![resultaat niet valide](documentation/screenshots/invalid_result.PNG)
 
+## Demo met voorbeeld
+
+De hierboven geschetste stappen kunnen uitgevoerd worden op <https://woopublish.herokuapp.com/>. Het voorbeeld hieronder is uitgewerkt op <https://woopublish.herokuapp.com/exampleproduction>.
+
 ## Voorbeeld
 [documentation/example publication](documentation/example%20publication) bevat een voorbeeldpublicatie. Het bevat de openbaar gemaakte documenten als losse pdf bestanden. Daarnaast is er een map met metadata waarin de ingevulde gegevens zijn te vinden in de vorm van een JSON (volledige publicatie) en een inventarislijst CSV (de losse documenten). 
 

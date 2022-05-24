@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Larooij"
+  given-names: "Maik"
+title: "Woopublish"
+version: 1.0.0
+date-released: 2022-05-18
+url: "https://github.com/maiklarooij/woopublish"

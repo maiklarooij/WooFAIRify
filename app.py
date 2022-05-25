@@ -2,7 +2,6 @@ from importlib.metadata import metadata
 from flask import Flask , request, render_template, Response
 from tempfile import mkdtemp
 
-import re
 from apps.production import create_metadata
 from apps.validation import validate_metadata
 import json
@@ -52,6 +51,9 @@ def create_json():
 
 @app.route("/download_json", methods=["POST"])
 def download_json():
+    """ 
+    Download JSON button is clicked, sending an HTTP response containing the file to the user for download.
+    """
     metadata_string = request.form.get('metadatastring')
 
     timestamp = strftime("%Y%m%d-%H%M", gmtime())
@@ -63,6 +65,9 @@ def download_json():
 
 @app.route("/upload_publication", methods=["GET", "POST"])
 def upload_json(method='normal'):
+    """ 
+    Handles file uploads for validation
+    """
     if request.method == 'GET':
         return render_template('uploadjson.html')
     else:
@@ -80,6 +85,9 @@ def upload_json(method='normal'):
 
 @app.route("/exampleproduction", methods=["POST", "GET"])
 def exampleproduction():
+    """
+    Shows an example to the user.
+    """
     if request.method == "GET":
         return render_template('exampleproduction.html')
 
@@ -87,6 +95,9 @@ def exampleproduction():
 
 @app.route("/examplevalidation", methods=["POST", "GET"])
 def examplevalidation():
+    """
+    Shows a validation example to the user.
+    """
     if request.method == "GET":
         files = os.listdir('documentation/example publication/documenten')
         return render_template('examplevalidation.html', files=files)
@@ -95,7 +106,9 @@ def examplevalidation():
 
 
 def generate_resultpage(metadata_object):
-
+    """
+    Creates a result page with the validated data.
+    """
     doc_table = pd.DataFrame(metadata_object['documents']).to_html(border=0, classes="table table-striped")
     infobox = pd.DataFrame.from_dict(metadata_object, orient="index").drop('documents').to_html(border=0, classes="table table-striped", header=False)
     metadata_string = json.dumps(metadata_object, indent=4)

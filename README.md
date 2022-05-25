@@ -1,8 +1,8 @@
-# Woopublish.
+# WooFAIRify
 Auteur: Maik Larooij (Universiteit van Amsterdam)
 
 ## Omschrijving
-Woopublish. is een simpele tool om Woo ([Wet open overheid](https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo)) besluiten te creëren en publiceren op een transparante wijze. Op deze manier voldoen de publicaties aan de FAIR data principes die zijn opgesteld door [Wilkinson et al. (2016)](https://www.nature.com/articles/sdata201618?ref=https://githubhelp.com). 
+WooFAIRify is een simpele tool om Woo ([Wet open overheid](https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo)) besluiten te creëren en publiceren op een transparante wijze. Op deze manier voldoen de publicaties aan de FAIR data principes die zijn opgesteld door [Wilkinson et al. (2016)](https://www.nature.com/articles/sdata201618?ref=https://githubhelp.com). 
 
 Een publicatie creëren kan met de volgende stappen:
 1. Vul de gegevens van de publicatie in. Voor meer informatie over de mogelijke gegevens, bekijk de [schema specificatie](documentation/schema_spec.md).
@@ -17,7 +17,7 @@ Mochten de gegevens niet valide zijn (ze voldoen niet aan de opgestelde eisen), 
 
 ## Demo met voorbeeld
 
-De hierboven geschetste stappen kunnen uitgevoerd worden op <https://woopublish.herokuapp.com/>. Het voorbeeld hieronder is uitgewerkt op <https://woopublish.herokuapp.com/exampleproduction>.
+De hierboven geschetste stappen kunnen uitgevoerd worden op <https://woofairify.herokuapp.com/>. Het voorbeeld hieronder is uitgewerkt op <https://woofairify.herokuapp.com/exampleproduction>.
 
 ## Voorbeeld
 [documentation/example publication](documentation/example%20publication) bevat een voorbeeldpublicatie. Het bevat de openbaar gemaakte documenten als losse pdf bestanden. Daarnaast is er een map met metadata waarin de ingevulde gegevens zijn te vinden in de vorm van een JSON (volledige publicatie) en een inventarislijst CSV (de losse documenten). 

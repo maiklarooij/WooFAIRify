@@ -109,7 +109,8 @@ def generate_resultpage(metadata_object):
     """
     Creates a result page with the validated data.
     """
-    doc_table = pd.DataFrame(metadata_object['documents']).to_html(border=0, classes="table table-striped")
+    table_metadata = [{k: v for k, v in document.items() if 'bodyText' not in k} for document in metadata_object['documents']]
+    doc_table = pd.DataFrame(table_metadata).to_html(border=0, classes="table table-striped")
     infobox = pd.DataFrame.from_dict(metadata_object, orient="index").drop('documents').to_html(border=0, classes="table table-striped", header=False)
     metadata_string = json.dumps(metadata_object, indent=4)
 

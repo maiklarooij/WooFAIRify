@@ -1,9 +1,9 @@
 {
     "title": "Zonneweide Jaagweg (sept, okt, nov, dec 2021)",
-    "identifier": "ZW8",
+    "identifier": "Woo.ZW8",
     "type": "Actieve openbaarmaking",
     "topic": "Zonneweide Jaagweg",
-    "idTopic": "ZW001",
+    "idTopic": "Woo.thema.001",
     "sourceUrl": "https://www.noord-holland.nl/Loket/Pilot_actieve_openbaarmaking/Documenten/Zonneweide_Jaagweg_sept_okt_nov_dec_2021",
     "decisionDate": "2021-12-23",
     "handledBy": "Provincie Noord-Holland",
@@ -14,7 +14,7 @@
           "documentType": "Besluit",
           "date": "2021-12-23",
           "language": "nld",
-          "identifier": "ZW8-1",
+          "identifier": "Woo.ZW8.1",
           "mimeType": "application/pdf",
           "fileName": "Besluit actieve openbaarmaking Zonneweide Jaagweg sept okt nov dec 2021.pdf",
           "fileExtension": "pdf",
@@ -34,7 +34,7 @@
           "groundsOfRefusal": [
             "10.2.e"
           ],
-          "identifier": "ZW8-2",
+          "identifier": "Woo.ZW8.2",
           "mimeType": "application/pdf",
           "fileName": "4. Memo BO verslag gesprek 20210907.pdf",
           "fileExtension": "pdf",
@@ -54,7 +54,7 @@
           "groundsOfRefusal": [
             "10.2.e"
           ],
-          "identifier": "ZW8-3",
+          "identifier": "Woo.ZW8.3",
           "mimeType": "application/pdf",
           "fileName": "2. Memo BO verslag gesprek 20210421.pdf",
           "fileExtension": "pdf",
@@ -68,7 +68,7 @@
           "documentType": "Inventarislijst",
           "date": "2021-12-23",
           "language": "nld",
-          "identifier": "ZW8-4",
+          "identifier": "Woo.ZW8.4",
           "mimeType": "application/pdf",
           "fileName": "Inventarisatielijst sept okt nov dec 2021 dossier zonneweide Jaagweg.pdf",
           "fileExtension": "pdf",
@@ -88,7 +88,7 @@
           "groundsOfRefusal": [
             "10.2.e"
           ],
-          "identifier": "ZW8-5",
+          "identifier": "Woo.ZW8.5",
           "mimeType": "application/pdf",
           "fileName": "1. Memo BO verslag gesprek 20210324.pdf",
           "fileExtension": "pdf",
@@ -108,7 +108,7 @@
           "groundsOfRefusal": [
             "10.2.e"
           ],
-          "identifier": "ZW8-6",
+          "identifier": "Woo.ZW8.6",
           "mimeType": "application/pdf",
           "fileName": "5. Agenda BO 18112021 gedeputeerde Stigter en Koggenland zonneweide Jaagweg.pdf",
           "fileExtension": "pdf",
@@ -128,7 +128,7 @@
           "groundsOfRefusal": [
             "10.2.e"
           ],
-          "identifier": "ZW8-7",
+          "identifier": "Woo.ZW8.7",
           "mimeType": "application/pdf",
           "fileName": "3. Memo BO verslag gesprek 20210520.pdf",
           "fileExtension": "pdf",

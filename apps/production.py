@@ -30,7 +30,7 @@ def create_metadata(form_data, files):
         # Exceptional cases where identifier is not specified, prevent errors
         # Note: such an input will not pass validation
         if 'identifier' in publication_dict:
-            document_attributes['identifier'] = f"{publication_dict['identifier']}-{number+1}"
+            document_attributes['identifier'] = f"{publication_dict['identifier']}.{number+1}"
         else: 
             document_attributes['identifier'] = number+1
 
@@ -74,8 +74,10 @@ def enrich_document(document_object, document_attributes):
             chars = 0
             textpages = 0
             words = 0
+            body_text = ""
             for page in pdf.pages:
                 page_text = page.extract_text()
+                body_text += page_text + " "
                 if page_text:
                     chars += len(page_text)
                     textpages += 1
@@ -84,6 +86,7 @@ def enrich_document(document_object, document_attributes):
         document_attributes['numberCharacters'] = chars
         document_attributes['numberWords'] = words
         document_attributes['numberTextPages'] = textpages
+        document_attributes['bodyText'] = body_text
 
     return document_attributes
 

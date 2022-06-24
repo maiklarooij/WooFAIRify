@@ -1,6 +1,6 @@
 {% extends 'layout.html' %}
 {% block header %}
-    <h2 class="title nav-text">Create publication.</h2>
+    <h2 class="title nav-text">Dossier produceren.</h2>
 {% endblock %}
 
 {% block content %}
@@ -104,15 +104,15 @@
                 </div>
             </div>
 
-            <button style="float: right" type="button" class="btn btn-primary" onclick="createDocuments()">Next step</button>
+            <button style="float: right" type="button" class="btn btn-primary" onclick="createDocuments()">Volgende stap</button>
         </div>
 
         <div id="document-level" style="display: none">
             <div class="input_fields_wrap">
             </div>
             <div><button style="margin-bottom: 30px" type="button" class="btn btn-primary" id="newdocument" onclick="addDocument()">Voeg document toe</button></div>
-            <button type="button" class="btn btn-primary" onclick="backToRequest()">Previous step</button>
-            <button style="float: right" class="btn btn-primary" type="submit">Create JSON</button>
+            <button type="button" class="btn btn-primary" onclick="backToRequest()">Vorige stap</button>
+            <button style="float: right" class="btn btn-primary" type="submit">Maak dossier</button>
         </div>
     </form> 
 

@@ -1,7 +1,7 @@
 {% extends 'layout.html' %}
 {% block header %}
 
-<h2 class="title nav-text">Result.</h2>
+<h2 class="title nav-text">Resultaat.</h2>
 
 {% endblock %}
 
@@ -10,9 +10,9 @@
     <div class="row">
         <div class="col-8">
             <label><h2>&#9989; Success</h2></label>
-            <p>{{ metadata['title'] }} is generated successfully and is valid!</p>
+            <p>{{ metadata['title'] }} is gegenereerd en valide!</p>
 
-            <h3>Automatically generated description:</h3>
+            <h3>Automatisch gegenereerde beschrijving:</h3>
             <p>
                 Besluit op een {{ metadata['type'] }} over {{ metadata['title'] }}. Het besluit is op {{ metadata['decisionDate'] }} genomen en is behandeld door {{ metadata['handledBy'] }}. De publicatie bestaat uit {{ metadata['numberDocuments'] }} documenten.
             </p>
@@ -21,15 +21,15 @@
                 <button name="metadatastring" class="btn btn-primary" type="submit" value="{{ metadata_string }}">Download JSON</button>
             </form>
             
-            <label><h2>&#128203; Documents (inventory list)</h2></label>
+            <label><h2>&#128203; Documenten (inventarislijst)</h2></label>
             <div style="overflow-x:auto;">
                 {{ table|safe }}
             </div>
 
-            <button name="metadatastring" class="btn btn-primary" onclick="tableToCSV()">Download inventory list CSV</button>
+            <button name="metadatastring" class="btn btn-primary" onclick="tableToCSV()">Download inventarislijst csv</button>
         </div>
         <div class="col-4 border-left border-dark infobox">
-            <label><h2><span class="emoji">&#x2139;</span> Publication info</h2></label>
+            <label><h2><span class="emoji">&#x2139;</span> Dossier metadata</h2></label>
             <div style="overflow-x:auto">
                 {{ infobox|safe }}
             </div>

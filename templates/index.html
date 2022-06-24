@@ -1,30 +1,30 @@
 {% extends 'layout.html' %}
 {% block header %}
-    <h2 class="title nav-text">Welcome.</h2>
+    <h2 class="title nav-text">Welkom.</h2>
 {% endblock %}
 
 {% block content %}
 
-    <label><h2>&#10067; What do you want to do?</h2></label>
+    <label><h2>&#10067; Wat wilt u doen?</h2></label>
     <div class='row'>
         <div class="col">
             <form action="/create_publication">
-                <button type="submit" class="btn btn-outline-success btn-lg btn-block">Create publication</button>
+                <button type="submit" class="btn btn-outline-success btn-lg btn-block">Dossier produceren</button>
             </form>
         </div>
         <div class="col">
             <form action="/upload_publication">
-                <button type="submit" class="btn btn-outline-success btn-lg btn-block">Validate publication</button>
+                <button type="submit" class="btn btn-outline-success btn-lg btn-block">Dossier valideren</button>
             </form>
         </div>
         <div class="col">
             <form action="/exampleproduction">
-                <button type="submit" class="btn btn-outline-success btn-lg btn-block">Show production example</button>
+                <button type="submit" class="btn btn-outline-success btn-lg btn-block">Voorbeeld dossier produceren</button>
             </form>
         </div>
         <div class="col">
             <form action="/examplevalidation">
-                <button type="submit" class="btn btn-outline-success btn-lg btn-block">Show validation example</button>
+                <button type="submit" class="btn btn-outline-success btn-lg btn-block">Voorbeeld dossier valideren</button>
             </form>
         </div>
     </div>

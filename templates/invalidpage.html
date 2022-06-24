@@ -2,13 +2,13 @@
 
 {% block header %}
 
-<h2 class="title nav-text">Result.</h2>
+<h2 class="title nav-text">Resultaat.</h2>
 
 {% endblock %}
 
 {% block content %}
 
-<label><h2>&#10060; Input is invalid!</h2></label>
+<label><h2>&#10060; Gegevens zijn niet volledig!</h2></label>
 
 <ul>
     {% for error in errors %}
@@ -17,7 +17,7 @@
 </ul>
 
 <form method="POST" action="download_json">
-    <button name="metadatastring" class="btn btn-primary" type="submit" value="{{ metadata_string }}">click me</button>
+    <button name="metadatastring" class="btn btn-primary" type="submit" value="{{ metadata_string }}">Probeer opnieuw</button>
 </form>
 
 {% endblock %}

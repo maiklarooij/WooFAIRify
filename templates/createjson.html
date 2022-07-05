@@ -9,15 +9,15 @@
             <!-- Basic info row-->
             <div class="row">
                 <div class="form-group col-md-6">
-                    <label for="title">Titel</label>
+                    <label for="title">Titel *</label>
                     <input class="form-control" type="text" name="title" placeholder="Besluit op Wob-verzoek inzake..."  >
                 </div>
                 <div class="form-group col-md-2">
-                    <label for="identifier">Uniek ID</label>
+                    <label for="identifier">Uniek ID *</label>
                     <input class="form-control" type="text" name="identifier" placeholder="ID">
                 </div>
                 <div class="form-group col-md-4">
-                    <label for="type">Type</label>
+                    <label for="type">Type *</label>
                     <select class="form-control" name="type">
                         <option disabled selected value> -- selecteer een optie -- </option>
                         <option>Verzoek</option>
@@ -65,7 +65,7 @@
                     <input class="datepicker_input form-control" type="text" name="fileDate" placeholder="YYYY/MM/DD">
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="decisionDate">Besluitdatum</label>
+                    <label for="decisionDate">Besluitdatum *</label>
                     <input class="datepicker_input form-control" type="text" name="decisionDate" placeholder="YYYY/MM/DD"  >
                 </div>
             </div>
@@ -73,11 +73,11 @@
             <!-- Decision row-->
             <div class="row">
                 <div class="form-group col-md-4">
-                    <label for="handledBy">Behandeld door</label>
+                    <label for="handledBy">Behandeld door *</label>
                     <input class="form-control" type="text" name="handledBy" placeholder="Behandeld door"  >
                 </div>
                 <div class="form-group col-md-4">
-                    <label for="valuation">Beoordeling</label>
+                    <label for="valuation">Beoordeling *</label>
                     <select class="form-control" name="valuation" >
                         <option disabled selected value> -- selecteer een optie -- </option>
                         <option>Openbaar</option>
@@ -156,11 +156,11 @@
 
         <div class="row">
             <div class="form-group col-md-6">
-                <label for="title">Titel</label>
+                <label for="title">Titel *</label>
                 <input class="form-control" type="text" name="${prefix}title" placeholder="Titel">
             </div>
             <div class="form-group col-md-3">
-                <label for="type">Documenttype</label>
+                <label for="type">Documenttype *</label>
                 <select class="form-control" id="${prefix}" name="${prefix}documentType" onchange="extraFields(this.id, this.value)">
                     <option disabled selected value> -- selecteer een optie -- </option>
                     <option>Verzoek</option>
@@ -170,13 +170,13 @@
                 </select>
             </div>
             <div class="form-group col-md-3">
-                <label for="date">Datum</label>
+                <label for="date">Datum *</label>
                 <input class="datepicker_input_${documents} form-control" type="text" name="${prefix}date" placeholder="YYYY/MM/DD"  >
             </div>
         </div>
         <div class="row">
             <div class="form-group col-md-6">
-                <label for="file">Bestand</label>
+                <label for="file">Bestand *</label>
                 <input class="form-control" type="file" name="${prefix}file" placeholder="Kies bestand...">
             </div>
             <div class="form-group col-md-6">
@@ -208,13 +208,13 @@
                     <input class="form-control" type="text" name="${prefix}recipient" placeholder="Ontvanger">
                 </div>
                 <div class="form-group col-md-4">
-                    <label for="annexType">Type vrijgegeven document</label>
+                    <label for="annexType">Type vrijgegeven document *</label>
                     <input class="form-control" type="text" name="${prefix}annexType" placeholder="Type vrijgegeven document">
                 </div>
             </div>
             <div class="row">
                 <div class="form-group col-md-4">
-                    <label for="valuation">Beoordeling</label>
+                    <label for="valuation">Beoordeling *</label>
                     <select class="form-control" name="${prefix}valuation" >
                         <option disabled selected value> -- selecteer een optie -- </option>
                         <option>Openbaar</option>

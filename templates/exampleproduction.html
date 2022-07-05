@@ -9,15 +9,15 @@
             <!-- Basic info row-->
             <div class="row">
                 <div class="form-group col-md-6">
-                    <label for="title">Titel</label>
+                    <label for="title">Titel *</label>
                     <input class="form-control" type="text" name="title" value="Zonneweide Jaagweg (sept, okt, nov, dec 2021)"  >
                 </div>
                 <div class="form-group col-md-2">
-                    <label for="identifier">Uniek ID</label>
+                    <label for="identifier">Uniek ID *</label>
                     <input class="form-control" type="text" name="identifier" value="Woo.ZW8">
                 </div>
                 <div class="form-group col-md-4">
-                    <label for="type">Type</label>
+                    <label for="type">Type *</label>
                     <select class="form-control" name="type">
                         <option selected value> Actieve openbaarmaking </option>
                         <option>Verzoek</option>
@@ -64,7 +64,7 @@
                     <input class="datepicker_input form-control" type="text" name="fileDate" placeholder="YYYY/MM/DD">
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="decisionDate">Besluitdatum</label>
+                    <label for="decisionDate">Besluitdatum *</label>
                     <input class="datepicker_input form-control" type="text" name="decisionDate" value="2021-12-23"  >
                 </div>
             </div>
@@ -72,11 +72,11 @@
             <!-- Decision row-->
             <div class="row">
                 <div class="form-group col-md-4">
-                    <label for="handledBy">Behandeld door</label>
+                    <label for="handledBy">Behandeld door *</label>
                     <input class="form-control" type="text" name="handledBy" value="Provincie Noord-Holland"  >
                 </div>
                 <div class="form-group col-md-4">
-                    <label for="valuation">Beoordeling</label>
+                    <label for="valuation">Beoordeling *</label>
                     <select class="form-control" name="valuation" >
                         <option selected value> Deels openbaar </option>
                         <option>Openbaar</option>
@@ -111,11 +111,11 @@
 
                 <div class="row">
                     <div class="form-group col-md-6">
-                        <label for="title">Titel</label>
+                        <label for="title">Titel *</label>
                         <input class="form-control" type="text" name="doc1.title" value="Besluit actieve openbaarmaking Zonneweide Jaagweg sept okt nov dec 2021">
                     </div>
                     <div class="form-group col-md-3">
-                        <label for="type">Documenttype</label>
+                        <label for="type">Documenttype *</label>
                         <select class="form-control" id="doc1." name="doc1.documentType" onchange="extraFields(this.id, this.value)">
                             <option selected value> Besluit </option>
                             <option>Verzoek</option>
@@ -124,13 +124,13 @@
                         </select>
                     </div>
                     <div class="form-group col-md-3">
-                        <label for="date">Datum</label>
+                        <label for="date">Datum *</label>
                         <input class="datepicker_input_${documents} form-control" type="text" name="doc1.date" value="2021-12-23"  >
                     </div>
                 </div>
                 <div class="row">
                     <div class="form-group col-md-6">
-                        <label for="file">Bestand</label>
+                        <label for="file">Bestand *</label>
                         <input class="form-control" type="file" name="doc1.file" placeholder="Kies bestand...">
                     </div>
                     <div class="form-group col-md-6">
@@ -155,11 +155,11 @@
 
                 <div class="row">
                     <div class="form-group col-md-6">
-                        <label for="title">Titel</label>
+                        <label for="title">Titel *</label>
                         <input class="form-control" type="text" name="doc7.title" value="Memo BO verslag gesprek 20210520">
                     </div>
                     <div class="form-group col-md-3">
-                        <label for="type">Documenttype</label>
+                        <label for="type">Documenttype *</label>
                         <select class="form-control" id="doc7." name="doc7.documentType" onchange="extraFields(this.id, this.value)">
                             <option>Verzoek</option>
                             <option>Besluit</option>
@@ -168,13 +168,13 @@
                         </select>
                     </div>
                     <div class="form-group col-md-3">
-                        <label for="date">Datum</label>
+                        <label for="date">Datum *</label>
                         <input class="datepicker_input_${documents} form-control" type="text" name="doc7.date" value="2021-07-19"  >
                     </div>
                 </div>
                 <div class="row">
                     <div class="form-group col-md-6">
-                        <label for="file">Bestand</label>
+                        <label for="file">Bestand *</label>
                         <input class="form-control" type="file" name="doc7.file" placeholder="Kies bestand...">
                     </div>
                     <div class="form-group col-md-6">
@@ -205,13 +205,13 @@
                             <input class="form-control" type="text" name="doc7.recipient" value="Gedeputeerde Stigter, wethouder Van Dolder">
                         </div>
                         <div class="form-group col-md-4">
-                            <label for="annexType">Type vrijgegeven document</label>
+                            <label for="annexType">Type vrijgegeven document *</label>
                             <input class="form-control" type="text" name="doc7.annexType" value="Memo">
                         </div>
                     </div>
                     <div class="row">
                         <div class="form-group col-md-4">
-                            <label for="valuation">Beoordeling</label>
+                            <label for="valuation">Beoordeling *</label>
                             <select class="form-control" name="doc7.valuation" >
                                 <option>Openbaar</option>
                                 <option selected value>Deels openbaar</option>
